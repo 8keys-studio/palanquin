@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerScript : MonoBehaviour {
+public class Player1Script : MonoBehaviour {
 
 	public Vector2 speed = new Vector2(50, 50);
 	public double maxJumpHeight = 0.5;
@@ -11,6 +11,9 @@ public class PlayerScript : MonoBehaviour {
 	public bool grounded;
 	public float jumpspeed = 150f;
 	private Rigidbody2D rb2d;
+	private int buttonDownCounter = 0;
+	private float jumpButtonHeld = 0.0f;
+	private float testJump = 0.0f;
 
 
 	// store the movement
@@ -20,6 +23,7 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
+
 	
 	}
 	
@@ -27,21 +31,49 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
 
 		// retrieve axis info
-		float inputX = Input.GetAxis("Horizontal");
-		//float inputY = Input.GetAxis("Vertical"); - no free vertical movement in a platformer
+		float inputX = Input.GetAxis("HorizontalP1");
 
-		//if(grounded == false)
-			//inputY = -1;
-
-		if((Input.GetButtonDown("Jump")) && (grounded == true))
+		//--- static jump code ---
+		if((Input.GetButtonDown("JumpP1")) && (grounded == true))
 		{
+
+			jumped = true;
 			rb2d.AddForce(Vector2.up * jumpspeed);
 
 
-				//double playerGrounded = transform.position.y;
-				//inputY = 1;
-			//grounded = false;
 		}
+//  --- testing for jump acceleration ---
+//		if((Input.GetButton("Jump")) && jumped)
+//		{
+//			buttonDownCounter++;
+//			jumpButtonHeld += Time.deltaTime;
+//
+//		}
+//
+//		if (jumped)
+//		{
+//
+//			Debug.Log("If jumped");
+//			testJump = (jumpspeed * jumpButtonHeld) * 2;
+//			//testJump = buttonDownCounter;
+//
+//			if(testJump < 120)
+//			{
+//				Debug.Log("Got to the while loop.");
+//				rb2d.AddForce(Vector2.up * testJump);
+//			}
+//			
+//		}
+//
+//		if(Input.GetButtonUp("Jump"))
+//		{
+//			//Debug.Log("buttonDownCounter =" + buttonDownCounter);
+//			Debug.Log("jumpButtonHeld =" + jumpButtonHeld);
+//			jumpButtonHeld = 0.0f;
+//			jumped = false;
+//			testJump = 0.0f;
+//		}
+// --- jump acceleration block end --- 
 			
 
 		// movement per direction
