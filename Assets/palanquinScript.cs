@@ -8,7 +8,7 @@ public class palanquinScript : MonoBehaviour {
 	//   on fare type
 
 	public float palSpeed; //speed of pal
-	public int hitSpeed; //speed cap of fare character
+	public float hitSpeed; //speed cap of fare character
 	public bool stunCollide; // stunned by collision?
 	public bool stunSpeed; //stunned by speeding?
 	public bool stunRotation; //stunned by rotation?
@@ -37,7 +37,7 @@ public class palanquinScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Vector3 vel = rb.velocity; //to get a Vector3 representation of the velocity
+		Vector3 vel = rb.velocity; // change this to pull in global value via movement script
 		palSpeed = vel.magnitude;  
 
 		// check for angles
@@ -52,7 +52,7 @@ public class palanquinScript : MonoBehaviour {
 		}
 
 		// check for speed
-		if (transform.rotation.eulerAngles.y > 90) //make # variable (change per character), confirm axis is correct. make || condition?
+		if (palSpeed > hitSpeed) //make # variable (change per character), confirm axis is correct. make || condition?
 			//Debug.Log(transform.eulerAngles.y); //testing
 		{
 			fareAmount = fareAmount - fareHitAmount;
@@ -61,6 +61,13 @@ public class palanquinScript : MonoBehaviour {
 			Invoke("resetColliderSpeed", speedStunTime);
 
 		}
+	}
+
+	void Jump(){
+	
+		//  if 
+		//	rb2d.AddForce(Vector2.up * jumpspeed);
+
 	}
 
 	void OnTriggerEnter (Collider other) { //if pal hits a tagged obstacle, score is reduced
@@ -93,6 +100,8 @@ public class palanquinScript : MonoBehaviour {
 	{
 		stunRotation = false;
 	}
+
+
 
 }
 

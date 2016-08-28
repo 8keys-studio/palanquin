@@ -15,6 +15,10 @@ public class Player1Script : MonoBehaviour {
 	private float jumpButtonHeld = 0.0f;
 	private float testJump = 0.0f;
 
+	//add canJump bool
+	//add moveLeft bool
+	//add moveRight bool
+
 
 	// store the movement
 	private Vector2 movement;
@@ -38,7 +42,7 @@ public class Player1Script : MonoBehaviour {
 		{
 
 			jumped = true;
-			rb2d.AddForce(Vector2.up * jumpspeed);
+			//rb2d.AddForce(Vector2.up * jumpspeed);
 
 
 		}
