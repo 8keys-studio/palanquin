@@ -49,6 +49,9 @@ TagManager:
   - name: Midground
     uniqueID: 2621596997
     locked: 0
+  - name: Street
+    uniqueID: 1249516123
+    locked: 0
   - name: Foreground
     uniqueID: 1859086223
     locked: 0
