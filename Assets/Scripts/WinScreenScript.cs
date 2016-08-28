@@ -73,6 +73,7 @@ public class WinScreenScript : MonoBehaviour
 
 			audio_player.Stop();
 			audio_player.PlayOneShot(startSound, 0.7F);
+			Debug.Log("Break point 1.");
 			Invoke("LoadLevel", 1);
 			// Back to start screen
 			//Application.LoadLevel(startMenu);
