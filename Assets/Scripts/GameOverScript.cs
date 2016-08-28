@@ -6,6 +6,12 @@
 /// Usage: 
 /// 	-	attach this script to an empty gameobject in a GameOver scene
 /// 	-	call that scene on GameOver condition using Application.LoadLevel("GameOver");
+/// 	- 	before call to GameOver, implement the following:
+/// 		PlayerPrefs.SetInt( "previousLevel", Application.loadedLevel );
+///			Application.LoadLevel( "Tutorial" );
+/// 	-	once implemented, change the retry behavior here tp:
+/// 		int previousLevel = PlayerPrefs.GetInt( "previousLevel" );
+///			Application.LoadLevel( previousLevel );
 /// </summary>
 public class GameOverScript : MonoBehaviour
 {
