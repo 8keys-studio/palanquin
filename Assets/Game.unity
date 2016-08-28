@@ -2186,7 +2186,7 @@ GameObject:
   - 4: {fileID: 496241792}
   - 212: {fileID: 496241793}
   m_Layer: 0
-  m_Name: PurrsianSky (1)
+  m_Name: PurrsianSky 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7208,7 +7208,7 @@ GameObject:
   - 212: {fileID: 1565819537}
   - 61: {fileID: 1565819536}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Left collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
