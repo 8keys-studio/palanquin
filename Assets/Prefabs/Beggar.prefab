@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000013652312706}
   - 61: {fileID: 61000012855916372}
   - 50: {fileID: 50000013532704118}
+  - 95: {fileID: 95000010778632272}
   m_Layer: 0
   m_Name: Beggar
   m_TagString: Untagged
@@ -73,6 +74,23 @@ BoxCollider2D:
   m_Offset: {x: -0.1, y: 0}
   serializedVersion: 2
   m_Size: {x: 6, y: 8.2}
+--- !u!95 &95000010778632272
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012208475904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 645e1b3069c9569469bb6f917ca8d1ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212000013652312706
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -84,9 +102,9 @@ SpriteRenderer:
   m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 272ba847f100d4251bb8260575189042, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -100,9 +118,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1859086223
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: edfa4eaaf3a744b74af60274e902d0a1, type: 3}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: afabcb400fb871f42bd27e8e00fed56d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
