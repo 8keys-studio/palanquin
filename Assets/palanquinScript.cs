@@ -7,7 +7,7 @@ public class palanquinScript : MonoBehaviour {
 	// - May need to move some individual checks (angle, speed) to character objs, or else create bools for each condition based
 	//   on fare type
 
-	public int palSpeed; //speed of pal
+	public float palSpeed; //speed of pal
 	public int hitSpeed; //speed cap of fare character
 	public bool stunCollide; // stunned by collision?
 	public bool stunSpeed; //stunned by speeding?
@@ -30,7 +30,7 @@ public class palanquinScript : MonoBehaviour {
 		stunCollide = false;
 		stunSpeed = false;
 		stunRotation = false;
-		rb = GetComponent<Rigidbody>();
+		rb = GetComponent<Rigidbody2D>();
 
 	}
 
