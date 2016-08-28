@@ -23,6 +23,7 @@ public class palanquinScript : MonoBehaviour {
 	public GUIText fareText; //create GUI to display total fare
 
 	private Rigidbody2D rb;
+	public GameObject movementObj; //attach movement script's prefab obj
 
 	// Use this for initialization
 	void Start () {
@@ -65,8 +66,13 @@ public class palanquinScript : MonoBehaviour {
 
 	void Jump(){
 	
-		//  if 
-		//	rb2d.AddForce(Vector2.up * jumpspeed);
+		if (movementObj.GetComponent<movementScript>().leftJumped == true){
+			//	rb2d.AddForce(Vector2.up * jumpspeed); //on LEFT side of Pal
+		}		
+
+		if (movementObj.GetComponent<movementScript>().rightJumped == true){
+			//	rb2d.AddForce(Vector2.up * jumpspeed); //on RIGHT side of Pal
+		}	
 
 	}
 

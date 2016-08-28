@@ -26,7 +26,7 @@ public class movementScript : MonoBehaviour {
 	void Start () {
 
 
-		// call pal left y transform
+		// call pal left y transform - moved from Update?
 		// call pal right y transform
 
 	}
@@ -34,15 +34,13 @@ public class movementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Transform l1Position = l1.GetComponent<Transform>;
-		Transform l2Position = l2.GetComponent<Transform>;
-		Transform r1Position = r1.GetComponent<Transform>;
-		Transform r2Position = r2.GetComponent<Transform>;
+		Transform l1Position = l1.GetComponent<Transform>();
+		Transform l2Position = l2.GetComponent<Transform>();
+		Transform r1Position = r1.GetComponent<Transform>();
+		Transform r2Position = r2.GetComponent<Transform>();
 
-		l1Position + l2Position == leftPalPos; //move this based on jump status?
-		r1Position + r2Position == rightPalPos;
-
-
+//		l1Position + l2Position == leftPalPos; //move this based on jump status?
+//		r1Position + r2Position == rightPalPos; //change this to y value only?
 
 		//define pal's transform rotation by #1 compared to #2
 	}
@@ -71,43 +69,36 @@ public class movementScript : MonoBehaviour {
 		//if player moves right, add to velocity
 
 
-		if (Input.GetAxis("HorizontalP1”) > 0){
+		if (Input.GetAxis("HorizontalP1") > 0){
 			// add vel
 		}
 
-		if (Input.GetAxis("HorizontalP1”) < 0){
+		if (Input.GetAxis("HorizontalP1") < 0){
 			// reduce vel
 		} 
 
-		if (Input.GetAxis("HorizontalP2”) > 0){
+		if (Input.GetAxis("HorizontalP2") > 0){
 			// add vel
 		}
 
-		if (Input.GetAxis("HorizontalP2”) < 0){
+		if (Input.GetAxis("HorizontalP2") < 0){
 			// reduce vel
 		} 
 
-		if (Input.GetAxis("HorizontalP3”) > 0){
+		if (Input.GetAxis("HorizontalP3") > 0){
 			// add vel
 		}
 
-		if (Input.GetAxis("HorizontalP3”) < 0){
+		if (Input.GetAxis("HorizontalP3") < 0){
 			// reduce vel
 		}
-		if (Input.GetAxis("HorizontalP1”) > 0){
+		if (Input.GetAxis("HorizontalP1") > 0){
 			// add vel
 		}
 
-		if (Input.GetAxis("HorizontalP1”) < 0){
+		if (Input.GetAxis("HorizontalP1") < 0){
 			// reduce vel
 		} 
-
-//		if GetKey(tag="right"){
-//			palVel = +.25;
-//		}
-
-
-		//if player moves left, reduce velocity
 	
 	}
 }
