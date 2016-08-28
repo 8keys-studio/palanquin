@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 /// <summary>
@@ -38,6 +39,7 @@ public class MenuScript : MonoBehaviour
 
 			// On Click, load the first level.
 			// "Stage1" is the name of the first scene we created.
+			GlobalControl.Instance.globalScore = 0;
 			audio_player.PlayOneShot(startSound, 0.7F);
 			Invoke("LoadLevel", 1);
 
@@ -45,7 +47,8 @@ public class MenuScript : MonoBehaviour
 	}
 
 	void LoadLevel() {
-		Application.LoadLevel(firstLevelName);
+		//Application.LoadLevel(firstLevelName);
+		SceneManager.LoadScene(firstLevelName, LoadSceneMode.Single);
 	}
 
 }

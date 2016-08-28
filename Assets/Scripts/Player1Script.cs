@@ -40,7 +40,7 @@ public class Player1Script : MonoBehaviour {
 		//--- static jump code ---
 		if((Input.GetButtonDown("JumpP1")) && (grounded == true))
 		{
-
+			
 			jumped = true;
 			//rb2d.AddForce(Vector2.up * jumpspeed);
 

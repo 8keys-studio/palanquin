@@ -1,17 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Start or quit the game
-/// 
-/// Usage: 
-/// 	-	attach this script to an empty gameobject in a GameOver scene
-/// 	-	call that scene on GameOver condition using Application.LoadLevel("GameOver");
-/// 	- 	before call to GameOver, implement the following:
-/// 		PlayerPrefs.SetInt( "previousLevel", Application.loadedLevel );
-///			Application.LoadLevel( "Tutorial" );
-/// 	-	once implemented, change the retry behavior here tp:
-/// 		int previousLevel = PlayerPrefs.GetInt( "previousLevel" );
-///			Application.LoadLevel( previousLevel );
+/// Restart the level or quit the game
 /// </summary>
 public class GameOverScript : MonoBehaviour
 {
@@ -48,7 +39,8 @@ public class GameOverScript : MonoBehaviour
 		)
 		{
 			// Reload the level
-			Application.LoadLevel(retryStage);
+			//Application.LoadLevel(retryStage);
+			SceneManager.LoadScene(GlobalControl.Instance.lastLevel, LoadSceneMode.Single);
 		}
 
 		if (
@@ -64,8 +56,11 @@ public class GameOverScript : MonoBehaviour
 			)
 		)
 		{
-			// Reload the level
-			Application.LoadLevel(startMenu);
+			// Clear the global score
+			GlobalControl.Instance.globalScore = 0;
+			// Back to start screen
+			//Application.LoadLevel(startMenu);
+			SceneManager.LoadScene(startMenu, LoadSceneMode.Single);
 		}
 	}
 }
