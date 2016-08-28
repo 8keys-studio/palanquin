@@ -8,10 +8,13 @@ public class GameOverScript : MonoBehaviour
 {
 	public string retryStage = "scene1";
 	public string startMenu = "StartMenu";
+	public AudioClip startSound;
+	//	public AudioClip gameoverMusic;
+	AudioSource audio_player;
 
 	void OnGUI()
 	{
-
+		audio_player = GetComponent<AudioSource>();
 		int buttonWidth = new int();
 		int buttonHeight = new int();
 
@@ -40,7 +43,10 @@ public class GameOverScript : MonoBehaviour
 		{
 			// Reload the level
 			//Application.LoadLevel(retryStage);
-			SceneManager.LoadScene(GlobalControl.Instance.lastLevel, LoadSceneMode.Single);
+//			SceneManager.LoadScene(GlobalControl.Instance.lastLevel, LoadSceneMode.Single);
+			audio_player.Stop();
+			audio_player.PlayOneShot(startSound, 0.7F);
+			Invoke("LoadLastLevel", 1);
 		}
 
 		if (
@@ -57,10 +63,40 @@ public class GameOverScript : MonoBehaviour
 		)
 		{
 			// Clear the global score
-			GlobalControl.Instance.globalScore = 0;
+			try
+			{
+				GlobalControl.Instance.globalScore = 0;
+			}
+			catch (System.NullReferenceException ex)
+			{
+				Debug.Log(ex.Message);
+			}
+
 			// Back to start screen
 			//Application.LoadLevel(startMenu);
-			SceneManager.LoadScene(startMenu, LoadSceneMode.Single);
+//			SceneManager.LoadScene(startMenu, LoadSceneMode.Single);
+			audio_player.Stop();
+			audio_player.PlayOneShot(startSound, 0.7F);
+			Invoke("LoadStartMenu", 1);
 		}
+	}
+
+	void LoadLastLevel() {
+		//Application.LoadLevel(firstLevelName);
+		Debug.Log("Got to LoadLastLevel coroutine.");
+		try
+		{
+			SceneManager.LoadScene(GlobalControl.Instance.lastLevel, LoadSceneMode.Single);
+		}
+		catch (System.NullReferenceException ex)
+		{
+			Debug.Log(ex.Message);
+		}
+	}
+
+	void LoadStartMenu() {
+		//Application.LoadLevel(firstLevelName);
+		Debug.Log("Got to LoadStartMenu coroutine.");
+		SceneManager.LoadScene(startMenu, LoadSceneMode.Single);
 	}
 }

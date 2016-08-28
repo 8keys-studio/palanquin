@@ -19,11 +19,13 @@ public class PauseScript : MonoBehaviour {
 			if (Time.timeScale == 1)
 			{
 				Time.timeScale = 0;
+				AudioListener.pause = true;
 				GetComponent<SpriteRenderer>().enabled = true;
 			}
 			else
 			{
 				Time.timeScale = 1;
+				AudioListener.pause = false;
 				GetComponent<SpriteRenderer>().enabled = false;
 			}
 		}

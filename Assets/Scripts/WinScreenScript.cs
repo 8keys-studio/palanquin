@@ -8,11 +8,14 @@ public class WinScreenScript : MonoBehaviour
 {
 	public string retryStage = "scene1";
 	public string startMenu = "StartMenu";
+	public AudioClip startSound;
+//	public AudioClip gameoverMusic;
+	AudioSource audio_player;
 
 
 	void OnGUI()
 	{
-
+		audio_player = GetComponent<AudioSource>();
 		int buttonWidth = new int();
 		int buttonHeight = new int();
 
@@ -57,11 +60,29 @@ public class WinScreenScript : MonoBehaviour
 			)
 		)
 		{
+			Debug.Log("Got here.");
 			// Clear the global score
-			GlobalControl.Instance.globalScore = 0;
+			try 
+			{
+				GlobalControl.Instance.globalScore = 0;
+			}
+			catch (System.NullReferenceException ex)
+			{
+				Debug.Log(ex.Message);
+			}
+
+			audio_player.Stop();
+			audio_player.PlayOneShot(startSound, 0.7F);
+			Invoke("LoadLevel", 1);
 			// Back to start screen
 			//Application.LoadLevel(startMenu);
-			SceneManager.LoadScene(startMenu, LoadSceneMode.Single);
+
 		}
+	}
+
+	void LoadLevel() {
+		//Application.LoadLevel(firstLevelName);
+		Debug.Log("Got to coroutine.");
+		SceneManager.LoadScene(startMenu, LoadSceneMode.Single);
 	}
 }
