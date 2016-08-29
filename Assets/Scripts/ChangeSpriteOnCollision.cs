@@ -4,7 +4,7 @@ using System.Collections;
 public class ChangeSpriteOnCollision : MonoBehaviour {
 	
 	public Sprite newSprite;
-	public float destroyTime = 10.0f;
+	public float destroyTime = 2.0f;
 	public float velocityX = -3.0f;
 	public float velocityY = 5.0f;
 	private bool deleting = false;

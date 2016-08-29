@@ -3397,6 +3397,11 @@ Prefab:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012885989944, guid: c98b652ce970e4860801a12b7fbf538d,
+        type: 2}
+      propertyPath: destroyTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c98b652ce970e4860801a12b7fbf538d, type: 2}
   m_IsPrefabParent: 0

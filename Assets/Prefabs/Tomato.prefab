@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSprite: {fileID: 21300000, guid: bece1bb25f0de4fe29494474a9e2425f, type: 3}
-  destroyTime: 10
+  destroyTime: 2
   velocityX: -3
   velocityY: 5
 --- !u!212 &212000010563929940
