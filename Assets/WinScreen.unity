@@ -384,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   retryStage: scene1
   startMenu: StartMenu
-  startSound: {fileID: 0}
+  startSound: {fileID: 8300000, guid: 8f8df2b17e64b43abb900b2fe251d1f2, type: 3}
 --- !u!4 &2119698787
 Transform:
   m_ObjectHideFlags: 0
