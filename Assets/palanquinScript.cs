@@ -111,14 +111,16 @@ public class palanquinScript : MonoBehaviour {
 	
 		if (movementObj.GetComponent<movementScript>().leftJumped == true){
 				//rb.AddForce(Vector2.up * jumpspeed); //on LEFT side of Pal
-			rb.AddForceAtPosition(new Vector2(0,20), leftWheelPos);
+			rb.AddForceAtPosition(new Vector2(0,200), leftWheelPos, ForceMode2D.Impulse);
 			movementObj.GetComponent<movementScript> ().leftJumped = false;
+			Debug.Log ("final jump L firing" + leftWheelPos);
 		}		
 
 		if (movementObj.GetComponent<movementScript>().rightJumped == true){
 			//rb.AddForce(Vector2.up * jumpspeed); //on RIGHT side of Pal
-			rb.AddForceAtPosition(new Vector2(0,20), rightWheelPos);
+			rb.AddForceAtPosition(new Vector2(0,200), rightWheelPos, ForceMode2D.Impulse);
 			movementObj.GetComponent<movementScript> ().rightJumped = false;
+			Debug.Log ("final jump R firing" + rightWheelPos);
 		}	
 
 	}

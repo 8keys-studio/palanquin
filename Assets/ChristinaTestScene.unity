@@ -312,6 +312,46 @@ Prefab:
       propertyPath: m_Name
       value: Palanquin4Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012737558198, guid: f8cd899b0431349e18aa461e537a1e9f,
+        type: 2}
+      propertyPath: jumpTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014107095494, guid: f8cd899b0431349e18aa461e537a1e9f,
+        type: 2}
+      propertyPath: jumpTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014161754286, guid: f8cd899b0431349e18aa461e537a1e9f,
+        type: 2}
+      propertyPath: jumpTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010480455548, guid: f8cd899b0431349e18aa461e537a1e9f,
+        type: 2}
+      propertyPath: jumpTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010480455548, guid: f8cd899b0431349e18aa461e537a1e9f,
+        type: 2}
+      propertyPath: jumpspeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014161754286, guid: f8cd899b0431349e18aa461e537a1e9f,
+        type: 2}
+      propertyPath: jumpspeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012737558198, guid: f8cd899b0431349e18aa461e537a1e9f,
+        type: 2}
+      propertyPath: jumpspeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014107095494, guid: f8cd899b0431349e18aa461e537a1e9f,
+        type: 2}
+      propertyPath: jumpspeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8cd899b0431349e18aa461e537a1e9f, type: 2}
   m_IsPrefabParent: 0

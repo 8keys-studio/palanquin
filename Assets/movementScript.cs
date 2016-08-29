@@ -57,12 +57,14 @@ public class movementScript : MonoBehaviour {
 
 	void leftJump ()
 	{
+		Debug.Log ("Help" + l1.GetComponent<Player1Script> ().jumped);
 		if (l1.GetComponent<Player1Script> ().jumped == true && l2.GetComponent<Player2Script> ().jumped == true) {
 			// if both l hitting jump, left jumping. bool called by pal script?
 			//add bool to all player scripts called canJump?
 			Debug.Log ("leftJumped Start");
 			leftJumped = true;
 		} else {
+			//Debug.Log ("Else fired but if didn't");
 			if (leftJumped == true) {
 				leftJumped = false;
 				Debug.Log ("leftJumped Reset");
