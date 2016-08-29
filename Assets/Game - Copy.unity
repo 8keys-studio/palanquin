@@ -4948,7 +4948,7 @@ GameObject:
   - 61: {fileID: 210716446}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7748,7 +7748,7 @@ GameObject:
   - 61: {fileID: 366712566}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13830,7 +13830,7 @@ GameObject:
   - 61: {fileID: 628551451}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16539,7 +16539,7 @@ GameObject:
   - 61: {fileID: 772931573}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17229,7 +17229,7 @@ GameObject:
   - 61: {fileID: 797772282}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17405,7 +17405,7 @@ GameObject:
   - 61: {fileID: 804402354}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23007,6 +23007,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011787807814, guid: b2b5f100b3815194182ebcf0bbf57d39, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2b5f100b3815194182ebcf0bbf57d39, type: 2}
   m_IsPrefabParent: 0
@@ -27887,7 +27891,7 @@ GameObject:
   - 61: {fileID: 1259114754}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30566,7 +30570,7 @@ GameObject:
   - 61: {fileID: 1375999755}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31453,6 +31457,10 @@ Prefab:
     - target: {fileID: 1000011308469966, guid: 437dc63cf15a8f34a99518063f4e623d, type: 2}
       propertyPath: m_Name
       value: Crate-single (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011308469966, guid: 437dc63cf15a8f34a99518063f4e623d, type: 2}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 437dc63cf15a8f34a99518063f4e623d, type: 2}
@@ -37629,7 +37637,7 @@ GameObject:
   - 61: {fileID: 1719474461}
   m_Layer: 0
   m_Name: Collider (1)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42304,6 +42312,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011308469966, guid: 437dc63cf15a8f34a99518063f4e623d, type: 2}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 437dc63cf15a8f34a99518063f4e623d, type: 2}
   m_IsPrefabParent: 0
@@ -46117,7 +46129,7 @@ GameObject:
   - 61: {fileID: 2145111163}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
