@@ -14,10 +14,10 @@ public class palanquinScript : MonoBehaviour {
 	public GameObject leftWheel;
 	public GameObject rightWheel;
 
-	public bool Lgrounded;
-	public bool Rgrounded;
+//	public bool Lgrounded;
+//	public bool Rgrounded;
 
-	private float baseInputSpeed;
+	//private float baseInputSpeed;
 
 	public float palSpeed; //speed of pal
 	public float hitSpeed; //speed cap of fare character

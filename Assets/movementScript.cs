@@ -10,8 +10,8 @@ public class movementScript : MonoBehaviour {
 	public GameObject r1;
 	public GameObject r2;
 
-	public bool lGrounded; 
-	public bool rGrounded; 
+//	public bool lGrounded; 
+//	public bool rGrounded; 
 
 	private float leftPalPos;
 	private float rightPalPos;
