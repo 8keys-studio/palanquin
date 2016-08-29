@@ -16,8 +16,8 @@ public class movementScript : MonoBehaviour {
 	private float leftPalPos;
 	private float rightPalPos;
 
-	public bool leftJumped; //add timers to player scripts?
-	public bool rightJumped;
+	public bool leftJumped = false; //add timers to player scripts?
+	public bool rightJumped = false;
 
 	public float palVel; // pal's velocity
 
@@ -34,10 +34,13 @@ public class movementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Transform l1Position = l1.GetComponent<Transform>();
-		Transform l2Position = l2.GetComponent<Transform>();
-		Transform r1Position = r1.GetComponent<Transform>();
-		Transform r2Position = r2.GetComponent<Transform>();
+
+
+
+//		Transform l1Position = l1.GetComponent<Transform>();
+//		Transform l2Position = l2.GetComponent<Transform>();
+//		Transform r1Position = r1.GetComponent<Transform>();
+//		Transform r2Position = r2.GetComponent<Transform>();
 
 //		l1Position + l2Position == leftPalPos; //move this based on jump status?
 //		r1Position + r2Position == rightPalPos; //change this to y value only?
@@ -45,21 +48,39 @@ public class movementScript : MonoBehaviour {
 		//define pal's transform rotation by #1 compared to #2
 	}
 
+	void FixedUpdate(){
+		leftJump ();
+		rightJump ();
+	} 
+
 	void leftJump ()
 	{
-		if (l1.GetComponent<Player1Script>().jumped == true && l2.GetComponent<Player2Script>().jumped == true){
-		// if both l hitting jump, left jumping. bool called by pal script?
-		//add bool to all player scripts called canJump?
+		if (l1.GetComponent<Player1Script> ().jumped == true && l2.GetComponent<Player2Script> ().jumped == true) {
+			// if both l hitting jump, left jumping. bool called by pal script?
+			//add bool to all player scripts called canJump?
+			Debug.Log ("leftJumped Start");
 			leftJumped = true;
+		} else {
+			if (leftJumped == true) {
+				leftJumped = false;
+				Debug.Log ("leftJumped Reset");
+			}
 		}
 	}
 
 	void rightJump ()
 	{
-		if (r1.GetComponent<Player3Script>().jumped == true && r2.GetComponent<Player4Script>().jumped == true){
+		if (r1.GetComponent<Player3Script> ().jumped == true && r2.GetComponent<Player4Script> ().jumped == true) {
 			// if both l hitting jump, left jumping. bool called by pal script?
 			//add bool to all player scripts called canJump?
+			//
+			Debug.Log ("rightJumped Start");
 			rightJumped = true;
+		} else {
+			if (rightJumped == true) {
+				rightJumped = false;
+				Debug.Log ("rightJumped Reset");
+			}
 		}
 		// if both r hitting jump, right jumping
 
@@ -67,37 +88,51 @@ public class movementScript : MonoBehaviour {
 
 	void movement (){
 		//if player moves right, add to velocity
+		//calculate velocity based on combination of inputs
 
-
+		//Player L1
 		if (Input.GetAxis("HorizontalP1") > 0){
 			// add vel
+			Debug.Log("L1 Right");
 		}
 
 		if (Input.GetAxis("HorizontalP1") < 0){
 			// reduce vel
+			Debug.Log("L1 Left");
 		} 
 
+		//Player L2
 		if (Input.GetAxis("HorizontalP2") > 0){
 			// add vel
+			Debug.Log("L2 Right");
 		}
 
 		if (Input.GetAxis("HorizontalP2") < 0){
 			// reduce vel
+			Debug.Log("L2 Left");
+
 		} 
 
+		//Plater R1
 		if (Input.GetAxis("HorizontalP3") > 0){
 			// add vel
+			Debug.Log("R1 Right");
 		}
 
 		if (Input.GetAxis("HorizontalP3") < 0){
 			// reduce vel
-		}
-		if (Input.GetAxis("HorizontalP1") > 0){
-			// add vel
+			Debug.Log("R1 Left");
 		}
 
-		if (Input.GetAxis("HorizontalP1") < 0){
+		//Plater R2
+		if (Input.GetAxis("HorizontalP4") > 0){
+			// add vel
+			Debug.Log("R2 Right");
+		}
+
+		if (Input.GetAxis("HorizontalP4") < 0){
 			// reduce vel
+			Debug.Log("R2 Left");
 		} 
 	
 	}

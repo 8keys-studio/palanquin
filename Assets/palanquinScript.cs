@@ -7,6 +7,16 @@ public class palanquinScript : MonoBehaviour {
 	// - May need to move some individual checks (angle, speed) to character objs, or else create bools for each condition based
 	//   on fare type
 
+	public Vector2 speed = new Vector2(50, 50);
+	private Vector2 movement;
+	public float jumpspeed;
+
+	public GameObject leftWheel;
+	public GameObject rightWheel;
+
+	public bool Lgrounded;
+	public bool Rgrounded;
+
 	public float palSpeed; //speed of pal
 	public float hitSpeed; //speed cap of fare character
 	public bool stunCollide; // stunned by collision?
@@ -24,6 +34,14 @@ public class palanquinScript : MonoBehaviour {
 
 	private Rigidbody2D rb;
 	public GameObject movementObj; //attach movement script's prefab obj
+	public Vector3 com;
+
+	public int xRotationLimit = 20;
+	public int yRotationLimit = 20;
+	public int zRotationLimit = 20;
+
+	private Vector3 leftWheelPos;
+	private Vector3 rightWheelPos;
 
 	// Use this for initialization
 	void Start () {
@@ -32,11 +50,19 @@ public class palanquinScript : MonoBehaviour {
 		stunSpeed = false;
 		stunRotation = false;
 		rb = GetComponent<Rigidbody2D>();
+		rb.centerOfMass = com;
 
+		leftWheelPos = leftWheel.transform.position;
+		rightWheelPos = rightWheel.transform.position;
 	}
 
 	// Update is called once per frame
 	void Update () {
+
+
+		float inputX = Input.GetAxis("HorizontalP1");
+
+		movement = new Vector2(speed.x * inputX, rb.velocity.y);
 
 		Vector3 vel = rb.velocity; // change this to pull in global value via movement script
 		palSpeed = vel.magnitude;  
@@ -62,16 +88,34 @@ public class palanquinScript : MonoBehaviour {
 			Invoke("resetColliderSpeed", speedStunTime);
 
 		}
+
+		if(transform.rotation.eulerAngles.x > xRotationLimit){ //fix this so it doesn't suddenly reset to zero (try local rotation?)
+			transform.rotation = Quaternion.identity;
+		}
+
+		if(transform.rotation.eulerAngles.y > yRotationLimit){
+			transform.rotation = Quaternion.identity;
+		}
+
+		if(transform.rotation.eulerAngles.z > zRotationLimit){
+			transform.rotation = Quaternion.identity;
+		}
 	}
 
 	void Jump(){
+
+
 	
 		if (movementObj.GetComponent<movementScript>().leftJumped == true){
-			//	rb2d.AddForce(Vector2.up * jumpspeed); //on LEFT side of Pal
+				//rb.AddForce(Vector2.up * jumpspeed); //on LEFT side of Pal
+			rb.AddForceAtPosition(new Vector2(0,20), leftWheelPos);
+			movementObj.GetComponent<movementScript> ().leftJumped = false;
 		}		
 
 		if (movementObj.GetComponent<movementScript>().rightJumped == true){
-			//	rb2d.AddForce(Vector2.up * jumpspeed); //on RIGHT side of Pal
+			//rb.AddForce(Vector2.up * jumpspeed); //on RIGHT side of Pal
+			rb.AddForceAtPosition(new Vector2(0,20), rightWheelPos);
+			movementObj.GetComponent<movementScript> ().rightJumped = false;
 		}	
 
 	}
@@ -107,7 +151,14 @@ public class palanquinScript : MonoBehaviour {
 		stunRotation = false;
 	}
 
+	void FixedUpdate()
+	{
+		//move the game object
+		rb.velocity= movement;
+		Jump ();
+
+	}
+
 
 
 }
-

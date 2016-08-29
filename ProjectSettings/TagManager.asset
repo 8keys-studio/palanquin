@@ -61,3 +61,6 @@ TagManager:
   - name: UI
     uniqueID: 771169021
     locked: 0
+  - name: New Layer
+    uniqueID: 3921683045
+    locked: 0
