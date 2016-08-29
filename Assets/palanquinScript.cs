@@ -16,6 +16,8 @@ public class palanquinScript : MonoBehaviour {
 
 //	public bool Lgrounded;
 //	public bool Rgrounded;
+	private bool Lgrounded;
+	private bool canJump;
 
 	//private float baseInputSpeed;
 
@@ -46,6 +48,10 @@ public class palanquinScript : MonoBehaviour {
 	private Vector3 rightWheelPos;
 
 	public int jumpForceInt;
+	private bool P1Jumped = false;
+	private bool P2Jumped = false;
+	private bool P3Jumped = false;
+	private bool P4Jumped = false;
 
 	// Use this for initialization
 	void Start () {
@@ -62,6 +68,51 @@ public class palanquinScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		 
+		//<Justin's Jump code>
+		//using force at position with position set to the regular position of the object so that if we implement rotation later it will be easier to change
+		//and also because I'm lazy and I already wrote it this way so fuck changing it now lmaobbq
+
+		Lgrounded = GameObject.Find ("leftWheel").GetComponent<leftWheelScript> ().Lgrounded;
+
+		if (Lgrounded)
+		{
+			P1Jumped = false;
+			P2Jumped = false;
+			P3Jumped = false;
+			P4Jumped = false;
+		}
+
+		if (Input.GetButtonDown("JumpP1") && !P1Jumped)
+		{
+			Vector2 thruster = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+			Vector2 thrust = new Vector2(0,1000);
+			rb.AddForceAtPosition(thrust, thruster);
+			P1Jumped = true;
+		}
+		if (Input.GetButtonDown("JumpP2") && !P2Jumped)
+		{
+			Vector2 thruster = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+			Vector2 thrust = new Vector2(0,1000);
+			rb.AddForceAtPosition(thrust, thruster);
+			P2Jumped = true;
+		}		
+		if (Input.GetButtonDown("JumpP3") && !P3Jumped)
+		{
+			Vector2 thruster = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+			Vector2 thrust = new Vector2(0,1000);
+			rb.AddForceAtPosition(thrust, thruster);
+			P3Jumped = true;
+		}		
+		if (Input.GetButtonDown("JumpP4") && !P4Jumped)
+		{
+			Vector2 thruster = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+			Vector2 thrust = new Vector2(0,1000);
+			rb.AddForceAtPosition(thrust, thruster);
+			P4Jumped = true;
+		}
+		// </Justin's code>
 
 		float inputX = movementObj.GetComponent<movementScript>().palVel; // pull in global value via movement script 
 		//baseInputSpeed = Input.GetAxis("HorizontalP1");
@@ -109,8 +160,7 @@ public class palanquinScript : MonoBehaviour {
 
 	void Jump(){
 
-
-	
+		
 		if (movementObj.GetComponent<movementScript>().leftJumped == true){
 				//rb.AddForce(Vector2.up * jumpspeed); //on LEFT side of Pal
 			rb.velocity = new Vector2(0,1) * jumpForceInt;
@@ -166,6 +216,27 @@ public class palanquinScript : MonoBehaviour {
 		rb.velocity= movement;
 		Jump ();
 
+	}
+
+	//shifting into maximum overhack, sir!
+	void FloopTheJump1()
+	{
+		P1Jumped = false;
+	}
+	//i'm givin' er all she's got cap'n!
+	void FloopTheJump2()
+	{
+		P2Jumped = false;
+	}
+	//sir, we can't withstand hackiness of this magnitude
+	void FloopTheJump3()
+	{
+		P3Jumped = false;
+	}
+	//ensign, you will hack this or I will have you court-martialed, that's an order!
+	void FloopTheJump4()
+	{
+		P4Jumped = false;
 	}
 
 
