@@ -12,7 +12,7 @@ public class FaderScript : MonoBehaviour {
 
 	void OnGUI () 
 	{
-		Debug.Log("FaderScript activated.");
+		//Debug.Log("FaderScript activated.");
 		//fade out/in the alpha value using a direction, speed, and Time.deltatime to convert to seconds
 
 		alpha += fadeDir * fadeSpeed * Time.deltaTime;
@@ -37,7 +37,7 @@ public class FaderScript : MonoBehaviour {
 	// OnLevelWasLoaded is called when a level is loaded. It takes loaded level index (int) as a parameter so you can limit the fade in to certain scenes
 
 	void OnLevelWasLoaded () {
-		Debug.Log("SceneLoaded fired.");
+		//Debug.Log("SceneLoaded fired.");
 		// alpha = 1;   // use this is the alpha is not set to 1 by default
 		BeginFade (-1);
 	}
