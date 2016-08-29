@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class palanquinScript : MonoBehaviour {
+public class palanquinScript2TEST : MonoBehaviour {
 
 	//********NOTES**********:
 	// - May need to move some individual checks (angle, speed) to character objs, or else create bools for each condition based
 	//   on fare type
 
-	public Vector2 speed = new Vector2(50, 50);
+	//public Vector2 speed = new Vector2(50, 50);
+	public float speed = 6.0f;
 	private Vector2 movement;
-	public float jumpspeed;
+	public float jumpspeed = 8.0f;
+	public float gravity = 20.0f;
+	public bool grounded;
+
 
 	public GameObject leftWheel;
 	public GameObject rightWheel;
@@ -22,6 +26,7 @@ public class palanquinScript : MonoBehaviour {
 	public float palSpeed; //speed of pal
 	public float hitSpeed; //speed cap of fare character
 	public int jumpForceInt;
+	private Vector2 moveDirection = Vector2.zero;
 
 	public bool stunCollide; // stunned by collision?
 	public bool stunSpeed; //stunned by speeding?
@@ -55,8 +60,8 @@ public class palanquinScript : MonoBehaviour {
 		stunCollide = false;
 		stunSpeed = false;
 		stunRotation = false;
-		rb = GetComponent<Rigidbody2D>();
-		rb.centerOfMass = com;
+		//rb = GetComponent<Rigidbody2D>();
+		//rb.centerOfMass = com;
 
 		leftWheelPos = leftWheel.transform.position;
 		rightWheelPos = rightWheel.transform.position;
@@ -65,13 +70,7 @@ public class palanquinScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		float inputX = movementObj.GetComponent<movementScript>().palVel; // pull in global value via movement script 
-		//baseInputSpeed = Input.GetAxis("HorizontalP1");
 
-		movement = new Vector2(speed.x * inputX, rb.velocity.y);
-
-		Vector3 vel = rb.velocity; 
-		palSpeed = vel.magnitude;  
 
 		// check for angles
 		if (transform.rotation.eulerAngles.y > 90) //make # variable (change per character), confirm axis is correct. make || condition?
@@ -107,25 +106,50 @@ public class palanquinScript : MonoBehaviour {
 			transform.rotation = Quaternion.identity;
 		}
 	}
+
+	void Movement (){
+
+		CharacterController controller = GetComponent<CharacterController>();
+
+
+//		Vector3 vel = rb.velocity; 
+//		palSpeed = vel.magnitude;  
+		float palVel = movementObj.GetComponent<movementScript2TEST>().palVel; // pull in global value via movement script 
+		//baseInputSpeed = Input.GetAxis("HorizontalP1");
+		//movement = new Vector2(speed.x * palVel, rb.velocity.y);
+
+		if (grounded = true) {
+			movement = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
+			movement = transform.TransformDirection (movement);
+			movement *= speed; //palVel
+
+			movement.y -= gravity * Time.deltaTime;
+			controller.Move (movement * Time.deltaTime);
+		}
+	}
 		
 
 	void Jump(){
 
 
 	
-		if (movementObj.GetComponent<movementScript>().leftJumped == true){
+		if (movementObj.GetComponent<movementScript2TEST>().leftJumped == true){
 				//rb.AddForce(Vector2.up * jumpspeed); //on LEFT side of Pal
-			rb.velocity = new Vector2(0,1) * jumpForceInt;
+			//rb.velocity = new Vector2(0,1) * jumpForceInt;
+			                moveDirection.y = jumpspeed;
+
 			//rb.AddForceAtPosition(new Vector2(0,jumpForceInt), leftWheelPos, ForceMode2D.Impulse); 
-			movementObj.GetComponent<movementScript> ().leftJumped = false;
+			movementObj.GetComponent<movementScript2TEST> ().leftJumped = false;
 			Debug.Log ("final jump L firing" + leftWheelPos);
 		}		
 
-		if (movementObj.GetComponent<movementScript>().rightJumped == true){
+		if (movementObj.GetComponent<movementScript2TEST>().rightJumped == true){
 			//rb.AddForce(Vector2.up * jumpspeed); //on RIGHT side of Pal
-			rb.velocity = new Vector2(0,1) * jumpForceInt;
+			moveDirection.y = jumpspeed;
+
+			//rb.velocity = new Vector2(0,1) * jumpForceInt;
 			//rb.AddForceAtPosition(new Vector2(0,jumpForceInt), rightWheelPos, ForceMode2D.Impulse);
-			movementObj.GetComponent<movementScript> ().rightJumped = false;
+			movementObj.GetComponent<movementScript2TEST> ().rightJumped = false;
 			Debug.Log ("final jump R firing" + rightWheelPos);
 		}	
 
@@ -141,6 +165,34 @@ public class palanquinScript : MonoBehaviour {
 			Invoke("resetColliderStun", collideStunTime);
 		}
 	}
+
+		void OnTriggerStay2d(Collider2D other){
+			if (other.tag == ("ground"))
+			{
+				//Debug.Log("R1 Grounded");
+	
+				grounded = true;
+			}
+		}
+
+		void OnCollisionEnter2D(Collision2D other){
+			if (other.gameObject.CompareTag("ground")) {
+				grounded = true;
+			}
+		}
+			
+	
+		void OnCollisionStay2D(Collision2D other){
+			if (other.gameObject.CompareTag("ground")) {
+				grounded = true;
+			}
+		}
+	
+		void OnCollisionExit2D(Collision2D other){
+			if (other.gameObject.CompareTag("ground")) {
+				grounded = false;
+			}
+		}
 
 	void UpdateFare () //display current fare value via GUI
 	{
@@ -165,7 +217,8 @@ public class palanquinScript : MonoBehaviour {
 	void FixedUpdate()
 	{
 		//move the game object
-		rb.velocity= movement;
+		//rb.velocity= movement;
+		Movement ();
 		Jump ();
 
 	}
