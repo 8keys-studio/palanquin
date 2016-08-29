@@ -14175,10 +14175,34 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1088045309}
     - target: {fileID: 1000011904713974, guid: 516c854ec3c474b96b3492b4f6916d7f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012253739580, guid: 516c854ec3c474b96b3492b4f6916d7f,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012253739580, guid: 516c854ec3c474b96b3492b4f6916d7f,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012436992070, guid: 516c854ec3c474b96b3492b4f6916d7f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012253739580, guid: 516c854ec3c474b96b3492b4f6916d7f,
+        type: 2}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012253739580, guid: 516c854ec3c474b96b3492b4f6916d7f,
+        type: 2}
+      propertyPath: orthographic size
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 516c854ec3c474b96b3492b4f6916d7f, type: 2}
@@ -16570,9 +16594,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 21.25, y: 0.31390116}
+  m_Offset: {x: 22.823593, y: 0.3139012}
   serializedVersion: 2
-  m_Size: {x: 49.9, y: 0.62425214}
+  m_Size: {x: 46.75269, y: 0.6242522}
 --- !u!1 &773722696
 GameObject:
   m_ObjectHideFlags: 0
@@ -24208,6 +24232,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1088045309 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010900227886, guid: af7c9c33e7e1546f8b22ee23d4296fb2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029246783}
 --- !u!1 &1092625369
 GameObject:
   m_ObjectHideFlags: 0
@@ -25217,7 +25246,7 @@ Prefab:
     - target: {fileID: 114000012797561132, guid: 30b751eba2c364e08a43fd4cf43f4bda,
         type: 2}
       propertyPath: speedIncrement
-      value: 10
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30b751eba2c364e08a43fd4cf43f4bda, type: 2}
@@ -43575,6 +43604,10 @@ Prefab:
       propertyPath: movementObj
       value: 
       objectReference: {fileID: 848560447}
+    - target: {fileID: 1000012827268696, guid: af7c9c33e7e1546f8b22ee23d4296fb2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af7c9c33e7e1546f8b22ee23d4296fb2, type: 2}
   m_IsPrefabParent: 0
