@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//refactor this; the way it instantiaties its graphic is dumb as hell
+
 public class PauseScript : MonoBehaviour {
 
 	// Use this for initialization
