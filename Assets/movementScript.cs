@@ -20,6 +20,7 @@ public class movementScript : MonoBehaviour {
 	public bool rightJumped = false;
 
 	public float palVel; // pal's velocity
+	public float speedIncrement; //set and test this in inspector
 
 
 	// Use this for initialization
@@ -51,6 +52,7 @@ public class movementScript : MonoBehaviour {
 	void FixedUpdate(){
 		leftJump ();
 		rightJump ();
+		movement ();
 	} 
 
 	void leftJump ()
@@ -93,22 +95,29 @@ public class movementScript : MonoBehaviour {
 		//Player L1
 		if (Input.GetAxis("HorizontalP1") > 0){
 			// add vel
+			palVel = palVel + speedIncrement;
 			Debug.Log("L1 Right");
 		}
 
 		if (Input.GetAxis("HorizontalP1") < 0){
 			// reduce vel
+			palVel = palVel - speedIncrement;
+
 			Debug.Log("L1 Left");
 		} 
 
 		//Player L2
 		if (Input.GetAxis("HorizontalP2") > 0){
 			// add vel
+			palVel = palVel + speedIncrement;
+
 			Debug.Log("L2 Right");
 		}
 
 		if (Input.GetAxis("HorizontalP2") < 0){
 			// reduce vel
+			palVel = palVel - speedIncrement;
+
 			Debug.Log("L2 Left");
 
 		} 
@@ -116,22 +125,30 @@ public class movementScript : MonoBehaviour {
 		//Plater R1
 		if (Input.GetAxis("HorizontalP3") > 0){
 			// add vel
+			palVel = palVel + speedIncrement;
+
 			Debug.Log("R1 Right");
 		}
 
 		if (Input.GetAxis("HorizontalP3") < 0){
 			// reduce vel
+			palVel = palVel - speedIncrement;
+
 			Debug.Log("R1 Left");
 		}
 
 		//Plater R2
 		if (Input.GetAxis("HorizontalP4") > 0){
 			// add vel
+			palVel = palVel + speedIncrement;
+
 			Debug.Log("R2 Right");
 		}
 
 		if (Input.GetAxis("HorizontalP4") < 0){
 			// reduce vel
+			palVel = palVel - speedIncrement;
+
 			Debug.Log("R2 Left");
 		} 
 	

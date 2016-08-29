@@ -90,6 +90,122 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &104544427 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012898621336, guid: 3ef625ac9cf924291b76930c8e148f7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1226742606}
+--- !u!50 &104544429
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104544427}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &104544432
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104544427}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.16654491, y: -0.27756882}
+  serializedVersion: 2
+  m_Size: {x: 7.685917, y: 9.906477}
+--- !u!235 &104544433
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104544427}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 1476059629}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 1.5, y: 0}
+  m_Suspension:
+    m_DampingRatio: 1
+    m_Frequency: 1
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!235 &104544434
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104544427}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 394323891}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -0, y: -0}
+  m_ConnectedAnchor: {x: -0.5, y: -0}
+  m_Suspension:
+    m_DampingRatio: 1
+    m_Frequency: 1
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!255 &104544435
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104544427}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 1476059629}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 7, y: -4}
+  m_ConnectedAnchor: {x: 0.25, y: 0}
+  m_DampingRatio: 0
+  m_Frequency: 0
+--- !u!255 &104544436
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104544427}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 394323891}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -6, y: -3.5}
+  m_ConnectedAnchor: {x: 0.25, y: 0.25}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!1001 &122153774
 Prefab:
   m_ObjectHideFlags: 0
@@ -149,6 +265,11 @@ Prefab:
       propertyPath: r2
       value: 
       objectReference: {fileID: 825310947}
+    - target: {fileID: 114000012797561132, guid: 30b751eba2c364e08a43fd4cf43f4bda,
+        type: 2}
+      propertyPath: speedIncrement
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30b751eba2c364e08a43fd4cf43f4bda, type: 2}
   m_IsPrefabParent: 0
@@ -162,6 +283,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000014203611876, guid: 3ef625ac9cf924291b76930c8e148f7c,
     type: 2}
   m_PrefabInternal: {fileID: 1226742606}
+--- !u!50 &394323891 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50000012657934474, guid: 3ef625ac9cf924291b76930c8e148f7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1226742606}
 --- !u!1 &474671191
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +299,7 @@ GameObject:
   - 212: {fileID: 474671193}
   - 61: {fileID: 474671192}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: ground
   m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,9 +424,37 @@ Prefab:
       propertyPath: movementObj
       value: 
       objectReference: {fileID: 122153775}
-    m_RemovedComponents: []
+    - target: {fileID: 114000012204523810, guid: 3ef625ac9cf924291b76930c8e148f7c,
+        type: 2}
+      propertyPath: movementObj
+      value: 
+      objectReference: {fileID: 122153775}
+    - target: {fileID: 1000012898621336, guid: 3ef625ac9cf924291b76930c8e148f7c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012301162882, guid: 3ef625ac9cf924291b76930c8e148f7c, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012844729722, guid: 3ef625ac9cf924291b76930c8e148f7c, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010659109172, guid: 3ef625ac9cf924291b76930c8e148f7c,
+        type: 2}
+      propertyPath: com.y
+      value: -2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 50000012605269492, guid: 3ef625ac9cf924291b76930c8e148f7c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3ef625ac9cf924291b76930c8e148f7c, type: 2}
   m_IsPrefabParent: 0
+--- !u!50 &1476059629 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50000012172872452, guid: 3ef625ac9cf924291b76930c8e148f7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1226742606}
 --- !u!1 &2116989264 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013376088382, guid: 3ef625ac9cf924291b76930c8e148f7c,

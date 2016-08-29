@@ -17,6 +17,8 @@ public class palanquinScript : MonoBehaviour {
 	public bool Lgrounded;
 	public bool Rgrounded;
 
+	private float baseInputSpeed;
+
 	public float palSpeed; //speed of pal
 	public float hitSpeed; //speed cap of fare character
 	public bool stunCollide; // stunned by collision?
@@ -59,12 +61,12 @@ public class palanquinScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-		float inputX = Input.GetAxis("HorizontalP1");
+		float inputX = movementObj.GetComponent<movementScript>().palVel; // pull in global value via movement script 
+		//baseInputSpeed = Input.GetAxis("HorizontalP1");
 
 		movement = new Vector2(speed.x * inputX, rb.velocity.y);
 
-		Vector3 vel = rb.velocity; // change this to pull in global value via movement script
+		Vector3 vel = rb.velocity; 
 		palSpeed = vel.magnitude;  
 
 		// check for angles
@@ -101,6 +103,7 @@ public class palanquinScript : MonoBehaviour {
 			transform.rotation = Quaternion.identity;
 		}
 	}
+		
 
 	void Jump(){
 
