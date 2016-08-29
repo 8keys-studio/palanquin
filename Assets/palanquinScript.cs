@@ -49,7 +49,7 @@ public class palanquinScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		UpdateFare (); 
+		//UpdateFare (); 
 		stunCollide = false;
 		stunSpeed = false;
 		stunRotation = false;
