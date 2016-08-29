@@ -46,7 +46,9 @@ public class GameOverScript : MonoBehaviour
 //			SceneManager.LoadScene(GlobalControl.Instance.lastLevel, LoadSceneMode.Single);
 			audio_player.Stop();
 			audio_player.PlayOneShot(startSound, 0.7F);
-			Invoke("LoadLastLevel", 1);
+			float fadeTime = GameObject.Find("GlobalController").GetComponent<FaderScript>().BeginFade(1);
+			Debug.Log(fadeTime);
+			Invoke("LoadLastLevel", fadeTime);
 		}
 
 		if (
@@ -77,7 +79,9 @@ public class GameOverScript : MonoBehaviour
 //			SceneManager.LoadScene(startMenu, LoadSceneMode.Single);
 			audio_player.Stop();
 			audio_player.PlayOneShot(startSound, 0.7F);
-			Invoke("LoadStartMenu", 1);
+			float fadeTime = GameObject.Find("GlobalController").GetComponent<FaderScript>().BeginFade(1);
+			Debug.Log(fadeTime);
+			Invoke("LoadStartMenu", fadeTime);
 		}
 	}
 

@@ -46,7 +46,9 @@ public class MenuScript : MonoBehaviour
 			GlobalControl.Instance.globalScore = 0;
 			audio_player.Stop();
 			audio_player.PlayOneShot(startSound, 0.7F);
-			Invoke("LoadLevel", 1);
+			float fadeTime = GameObject.Find("GlobalController").GetComponent<FaderScript>().BeginFade(1);
+			Debug.Log(fadeTime);
+			Invoke("LoadLevel", fadeTime);
 
 		}
 	}

@@ -74,7 +74,9 @@ public class WinScreenScript : MonoBehaviour
 			audio_player.Stop();
 			audio_player.PlayOneShot(startSound, 0.7F);
 			Debug.Log("Break point 1.");
-			Invoke("LoadLevel", 1);
+			float fadeTime = GameObject.Find("GlobalController").GetComponent<FaderScript>().BeginFade(1);
+			Debug.Log(fadeTime);
+			Invoke("LoadLevel", fadeTime);
 			// Back to start screen
 			//Application.LoadLevel(startMenu);
 

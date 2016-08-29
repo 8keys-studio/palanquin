@@ -7,7 +7,6 @@ public class GlobalControl : MonoBehaviour
 	public int globalScore;
 	public int lastLevel;
 
-
 		void Awake ()   
 		{
 			if (Instance == null)
