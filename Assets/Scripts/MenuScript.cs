@@ -15,6 +15,7 @@ public class MenuScript : MonoBehaviour
 	public string firstLevelName = "";
 	public AudioClip startSound;
 	public AudioClip menuMusic;
+	public Font buttonFont;
 	AudioSource audio_player;
 
 	void OnGUI()
@@ -29,15 +30,23 @@ public class MenuScript : MonoBehaviour
 
 		// Determine the button's place on screen
 		// Center in X, 2/3 of the height in Y
-		Rect buttonRect = new Rect(
-			(buttonWidth * 9),
-			(2 * Screen.height / 3) - (buttonHeight / 2),
-			buttonWidth,
-			buttonHeight
-		);
+//		Rect buttonRect = new Rect(
+//			(buttonWidth * 9),
+//			(2 * Screen.height / 3) - (buttonHeight / 2),
+//			(buttonWidth * 2),
+//			(buttonHeight * 2)
+//		);
+
+//		GUIStyle buttonStyle = new GUIStyle();
+//		buttonStyle.font = buttonFont;
+//		buttonStyle.fontSize = 72;
+//		buttonStyle.normal.textColor = Color.white;
+
 
 		// Draw a button to start the game
-		if(GUI.Button(buttonRect,"Start!") || Input.GetButtonDown("Submit")) //click button or press Return - for testing purposes
+//		if(GUI.Button(buttonRect,"Press Enter to Start!", buttonStyle) || Input.GetButtonDown("Submit")) //click button or press Return - for testing purposes
+//		if(GUI.Button(buttonRect,"Press Enter to Start!") || Input.GetButtonDown("Submit")) //click button or press Return - for testing purposes
+		if(Input.GetButtonDown("Submit"))
 		{
 //			audio_player.Stop();
 //			audio_player.loop = false;
