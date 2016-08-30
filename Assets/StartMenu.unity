@@ -875,6 +875,11 @@ Prefab:
       propertyPath: BypassListenerEffects
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010038234024, guid: f5cbff28ab9304b5da14f24a4049d85a,
+        type: 2}
+      propertyPath: firstLevelName
+      value: Game - Copy
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000013834557696, guid: f5cbff28ab9304b5da14f24a4049d85a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f5cbff28ab9304b5da14f24a4049d85a, type: 2}
