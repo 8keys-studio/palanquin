@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000012046425264}
   - 95: {fileID: 95000010300199028}
   - 50: {fileID: 50000013519652194}
+  - 61: {fileID: 61000013661339978}
   m_Layer: 0
   m_Name: SingleRose-02
   m_TagString: Untagged
@@ -59,6 +60,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61000013661339978
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011310604844}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10}
 --- !u!95 &95000010300199028
 Animator:
   serializedVersion: 3
