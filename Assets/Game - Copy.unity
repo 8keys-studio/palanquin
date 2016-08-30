@@ -183,6 +183,73 @@ Transform:
   - {fileID: 2108145025}
   m_Father: {fileID: 2041748641}
   m_RootOrder: 42
+--- !u!1 &3842556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 3842558}
+  - 114: {fileID: 3842557}
+  m_Layer: 0
+  m_Name: SlopeNarr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &3842557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3842556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: a6e32d421ccbef349a3c273104c188a2, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: 'KING FAT CAT: Slopes! Slopes are the proper movement of the high and
+        proper-born. Deliver your beloved leader with grace and stately speed, peons!'
+      duration: 11.755102
+      drawAudio: 0
+      lastCalculatedHeight: 54
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 232
+    useSmartSubs: 1
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 4
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
+--- !u!4 &3842558
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3842556}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 130.7, y: 1.2, z: -8.8125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!1 &7564572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,6 +1570,75 @@ Transform:
   - {fileID: 1273911576}
   m_Father: {fileID: 2041748641}
   m_RootOrder: 35
+--- !u!1 &48199302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 48199303}
+  - 114: {fileID: 48199304}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &48199303
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48199302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1539664598}
+  m_RootOrder: 0
+--- !u!114 &48199304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48199302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: 6f4f2d147c784174faaf056e284a3bef, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: 'KING FAT CAT: I have emptied the coffers to ensure my lavishness is known
+        to all! You must earn the money back for me and the kingdom, of course. I
+        hereby graciously allow you to make use of my palanquin to offer your vehicular
+        services to the affluent citizens of Purrsia.'
+      duration: 21.968979
+      drawAudio: 0
+      lastCalculatedHeight: 72
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 196
+    useSmartSubs: 1
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 6
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
 --- !u!1 &49488962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5764,6 +5900,73 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011250568312, guid: c5e2cfb502a1e4bf8a858e0ea4a18435,
     type: 2}
   m_PrefabInternal: {fileID: 266081153}
+--- !u!1 &267007092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 267007094}
+  - 114: {fileID: 267007093}
+  m_Layer: 0
+  m_Name: DetractorNarr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &267007093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 267007092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: 25962fadca3b94d4cbb5e36daeaffe11, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: 'KING FAT CAT: Critics of my endless empire! How dare they show their
+        faces at my parade. Do not allow their fruit to mar my divine fur, menials!'
+      duration: 12.721633
+      drawAudio: 0
+      lastCalculatedHeight: 72
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 196
+    useSmartSubs: 1
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 3
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
+--- !u!4 &267007094
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 267007092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 96.46, y: 0.56, z: -8.8125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
 --- !u!1 &267826637
 GameObject:
   m_ObjectHideFlags: 0
@@ -6776,6 +6979,73 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011250568312, guid: c5e2cfb502a1e4bf8a858e0ea4a18435,
     type: 2}
   m_PrefabInternal: {fileID: 1825457757}
+--- !u!1 &311983240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 311983241}
+  - 114: {fileID: 311983242}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &311983241
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311983240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2033781246}
+  m_RootOrder: 0
+--- !u!114 &311983242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311983240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: e52e36ad86c8e114d8f11f8b487dac78, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: 'KING FAT CAT: Stairs?! Stairs are for peasants. Convey me up with grace,
+        and for the sake of your families do not tip your king!'
+      duration: 11.102041
+      drawAudio: 0
+      lastCalculatedHeight: 72
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 196
+    useSmartSubs: 1
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 4
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
 --- !u!1 &316178517
 GameObject:
   m_ObjectHideFlags: 0
@@ -11229,7 +11499,8 @@ Transform:
   m_LocalPosition: {x: 138, y: -8.015154, z: 5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 684343195}
   m_Father: {fileID: 672770748}
   m_RootOrder: 20
 --- !u!212 &532835837
@@ -13284,6 +13555,74 @@ Transform:
   - {fileID: 1872211177}
   m_Father: {fileID: 2041748641}
   m_RootOrder: 14
+--- !u!1 &598217102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 598217103}
+  - 114: {fileID: 598217104}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &598217103
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 598217102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1624384087}
+  m_RootOrder: 0
+--- !u!114 &598217104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 598217102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: c18620e686f079c479c6270b27c487e2, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: 'KING FAT CAT: My royal catnip fields! I loo-ooove my royal catnip. I
+        could linger here forever... BUT YOU MAY NOT. This is ROYAL catnip, hurry
+        along, my loyal retainers!'
+      duration: 17.580408
+      drawAudio: 0
+      lastCalculatedHeight: 54
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 232
+    useSmartSubs: 1
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 5
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
 --- !u!1 &598741481
 GameObject:
   m_ObjectHideFlags: 0
@@ -14982,6 +15321,72 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013270203416, guid: 4518d592dda4f47e89deacb8e6e640f8,
     type: 2}
   m_PrefabInternal: {fileID: 731981616}
+--- !u!1 &684343194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 684343195}
+  - 114: {fileID: 684343196}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &684343195
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684343194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 532835836}
+  m_RootOrder: 0
+--- !u!114 &684343196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684343194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: bdc91e2364da9c44a994ce35b3d59cb5, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: Get me past this drunk quickly!
+      duration: 4.8587756
+      drawAudio: 0
+      lastCalculatedHeight: 72
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 196
+    useSmartSubs: 1
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 6
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
 --- !u!1 &686906453
 GameObject:
   m_ObjectHideFlags: 0
@@ -27989,6 +28394,73 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1252735576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1252735577}
+  - 114: {fileID: 1252735578}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1252735577
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1252735576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1964660204}
+  m_RootOrder: 0
+--- !u!114 &1252735578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1252735576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: e52e36ad86c8e114d8f11f8b487dac78, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: 'KING FAT CAT: What?! These boxes are a hindrance. launch us over them,
+        but do not drop your king! '
+      duration: 11.102041
+      drawAudio: 0
+      lastCalculatedHeight: 72
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 196
+    useSmartSubs: 1
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 4
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
 --- !u!1 &1259114752
 GameObject:
   m_ObjectHideFlags: 0
@@ -34520,7 +34992,7 @@ GameObject:
   - 61: {fileID: 1539664599}
   m_Layer: 0
   m_Name: Right boundary
-  m_TagString: Untagged
+  m_TagString: goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34535,7 +35007,8 @@ Transform:
   m_LocalPosition: {x: 316.6, y: -1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 48199303}
   m_Father: {fileID: 2041748641}
   m_RootOrder: 47
 --- !u!61 &1539664599
@@ -35996,7 +36469,8 @@ Transform:
   m_LocalPosition: {x: 226, y: 1.5999999, z: 5.5}
   m_LocalScale: {x: 0.45180887, y: 0.45180884, z: 0.45180884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 598217103}
   m_Father: {fileID: 129327263}
   m_RootOrder: 5
 --- !u!1 &1629508498
@@ -40410,6 +40884,73 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1846791971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1846791972}
+  - 114: {fileID: 1846791973}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1846791972
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846791971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 230976359}
+  m_RootOrder: 0
+--- !u!114 &1846791973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846791971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: 2ec06879b6401294ab6e70ad61fcdf84, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: 'KING FAT CAT: This beggars belief! Who allowed this filthy racoon into
+        my parade? Glide above this undesirable, my loyal peons!'
+      duration: 11.023673
+      drawAudio: 0
+      lastCalculatedHeight: 72
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 196
+    useSmartSubs: 1
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 5
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
 --- !u!1 &1846941468
 GameObject:
   m_ObjectHideFlags: 0
@@ -44015,7 +44556,8 @@ Transform:
   m_LocalPosition: {x: 0.82, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 311983241}
   m_Father: {fileID: 596440561}
   m_RootOrder: 13
 --- !u!212 &2033781247
