@@ -7507,7 +7507,7 @@ MonoBehaviour:
       move: 0
     LoopAudioForDuration: 0
     expanded: 1
-    lastCalculatedHeight: 196
+    lastCalculatedHeight: 106
     useSmartSubs: 0
   OnFailure: 0
   OnSuccess: 0
@@ -11335,6 +11335,12 @@ Prefab:
       propertyPath: m_Name
       value: HappyHusky-throw (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011357868824, guid: edaccfb8663f3b94e9f9c316bf94d553,
+        type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1000012581045498, guid: 45eb2ad46210240d8a65560ca12f28c0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edaccfb8663f3b94e9f9c316bf94d553, type: 2}
   m_IsPrefabParent: 0
@@ -18068,6 +18074,12 @@ Prefab:
       propertyPath: m_Name
       value: HappyHusky-throw (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011357868824, guid: edaccfb8663f3b94e9f9c316bf94d553,
+        type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1000011310604844, guid: 260e1a1eebfa84f39b95b315f4982a9d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edaccfb8663f3b94e9f9c316bf94d553, type: 2}
   m_IsPrefabParent: 0
@@ -24374,6 +24386,12 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.19804852
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011357868824, guid: edaccfb8663f3b94e9f9c316bf94d553,
+        type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1000011310604844, guid: 260e1a1eebfa84f39b95b315f4982a9d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edaccfb8663f3b94e9f9c316bf94d553, type: 2}
   m_IsPrefabParent: 0
@@ -38850,6 +38868,85 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1751430436 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011904713974, guid: 516c854ec3c474b96b3492b4f6916d7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 652291674}
+--- !u!82 &1751430437
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1751430436}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5c8ef6a4b5a1a4d54b7cf83dae675a53, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1751519972
 GameObject:
   m_ObjectHideFlags: 0
@@ -41790,6 +41887,12 @@ Prefab:
       propertyPath: m_Name
       value: HappyHusky-throw (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011357868824, guid: edaccfb8663f3b94e9f9c316bf94d553,
+        type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1000012581045498, guid: 45eb2ad46210240d8a65560ca12f28c0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edaccfb8663f3b94e9f9c316bf94d553, type: 2}
   m_IsPrefabParent: 0
@@ -43970,7 +44073,7 @@ Prefab:
         type: 3}
     - target: {fileID: 22472304, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22416264, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
       propertyPath: m_LocalScale.y
@@ -44333,6 +44436,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013124622516, guid: af7c9c33e7e1546f8b22ee23d4296fb2,
+        type: 2}
+      propertyPath: goalSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 239f59bab7c844190a749637cf39ba63, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af7c9c33e7e1546f8b22ee23d4296fb2, type: 2}
   m_IsPrefabParent: 0
@@ -46522,6 +46630,58 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2124469334}
+--- !u!1001 &2126209814
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012149136856, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 16.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012149136856, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012149136856, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012149136856, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012149136856, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012149136856, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012149136856, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012149136856, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010507258082, guid: cee6dd65b38af4872a0e9b64cd15503c,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -354108773
+      objectReference: {fileID: 0}
+    - target: {fileID: 50000011038239552, guid: cee6dd65b38af4872a0e9b64cd15503c,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cee6dd65b38af4872a0e9b64cd15503c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2131501384
 GameObject:
   m_ObjectHideFlags: 0

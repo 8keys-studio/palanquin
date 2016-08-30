@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/StartMenu.unity
   - enabled: 1
     path: Assets/Game - Copy.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/scene1.unity
   - enabled: 1
     path: Assets/GameOver.unity
