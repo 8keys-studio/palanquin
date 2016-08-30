@@ -7191,6 +7191,76 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.07894616, y: 0.6308952}
+--- !u!1 &339965699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 339965701}
+  - 114: {fileID: 339965700}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &339965700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339965699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b64140504f9afa49890af388446118e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseNarrationList: 0
+  narrationList: {fileID: 0}
+  theNarration:
+    busyBehavior: 0
+    singleAudio_MultiSub: 1
+    mainAudio: {fileID: 8300000, guid: 00c34d4d6098802428517be04bb57230, type: 3}
+    phrases:
+    - audio: {fileID: 0}
+      text: 'KING FAT CAT: My pitiful and loyal servants, parade me through my city
+        so that my people may bask in my magnificence. Remember, you carry the most
+        precious treasure of the empire - me! No single cat can bear such a WEIGHT
+        of responsibility alone, so the four of you must bear me together. Carry me  with
+        care, and do not dishonour your kingdom! '
+      duration: 31.89551
+      drawAudio: 0
+      lastCalculatedHeight: 72
+      move: 0
+    LoopAudioForDuration: 0
+    expanded: 1
+    lastCalculatedHeight: 196
+    useSmartSubs: 0
+  OnFailure: 0
+  OnSuccess: 0
+  ResetCooldown: 0
+  delayPlayingBy: 0
+  is2D: 1
+  triggeredBy: {fileID: 1088045310}
+  proximity: 5
+  timeInProximityToTrigger: 0
+  timeMustBeConsecutive: 0
+--- !u!4 &339965701
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339965699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.98, y: -3.44, z: -8.8125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!1 &343563049
 GameObject:
   m_ObjectHideFlags: 0
@@ -24237,6 +24307,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010900227886, guid: af7c9c33e7e1546f8b22ee23d4296fb2,
     type: 2}
   m_PrefabInternal: {fileID: 2029246783}
+--- !u!4 &1088045310 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013270894678, guid: af7c9c33e7e1546f8b22ee23d4296fb2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029246783}
+--- !u!114 &1088045316 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010220090648, guid: af7c9c33e7e1546f8b22ee23d4296fb2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029246783}
+  m_Script: {fileID: 11500000, guid: 106c554dc0bb34759b298339aa0ee0b2, type: 3}
 --- !u!1 &1092625369
 GameObject:
   m_ObjectHideFlags: 0
@@ -43270,6 +43351,109 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &2022013267
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 480952, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.343372
+      objectReference: {fileID: 0}
+    - target: {fileID: 480952, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.073246956
+      objectReference: {fileID: 0}
+    - target: {fileID: 480952, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -8.825916
+      objectReference: {fileID: 0}
+    - target: {fileID: 480952, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480952, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480952, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480952, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 480952, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464564, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1088045316}
+    - target: {fileID: 11437056, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_Color.r
+      value: 0.9191176
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437056, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_Color.g
+      value: 0.108131476
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437056, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_Color.b
+      value: 0.108131476
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401396, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_Color.r
+      value: 0.8897059
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401396, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401396, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401396, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422524, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 01cd679a1b9ee48bf9c546f6ce2cb97e,
+        type: 3}
+    - target: {fileID: 22472304, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416264, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7375002
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416264, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.82445526
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401396, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_Text
+      value: Press "Space" to Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 22447206, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22447206, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -92
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2024918813
 GameObject:
   m_ObjectHideFlags: 0
