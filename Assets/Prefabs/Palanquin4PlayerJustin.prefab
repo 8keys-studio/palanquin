@@ -43,6 +43,7 @@ GameObject:
   - 61: {fileID: 61000011845514618}
   - 235: {fileID: 235000010459366546}
   - 235: {fileID: 235000011709517648}
+  - 68: {fileID: 68000012275498784}
   m_Layer: 8
   m_Name: Palanquin4PlayerJustin
   m_TagString: Untagged
@@ -103,7 +104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000012867169836
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +378,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010900227886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 16.3, y: -2.2, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -511,7 +512,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1000010900227886}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0cb77231a430b454fb792ff7ffcc3943, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0.16654491, y: -4.517006}
@@ -545,6 +546,21 @@ BoxCollider2D:
   m_Offset: {x: -0.44544888, y: -0.92059565}
   serializedVersion: 2
   m_Size: {x: 1.5939319, y: 4.0290537}
+--- !u!68 &68000012275498784
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010900227886}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 0cb77231a430b454fb792ff7ffcc3943, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -3.126852, y: 0.9259057}
+  - {x: -3.0899353, y: -3.769755}
 --- !u!81 &81000010579447636
 AudioListener:
   m_ObjectHideFlags: 1
@@ -695,7 +711,7 @@ MonoBehaviour:
   jumped: 0
   inputY: -1
   lWheelGrounded: 0
-  jumpspeed: 2
+  jumpspeed: 600
   jumpTimer: 1
 --- !u!114 &114000012525172392
 MonoBehaviour:
@@ -795,7 +811,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -354108773
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 71f3c6a15c3ac134aa48e800ced0b050, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -828,7 +844,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -354108773
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37b7f423057a4ee4c8cca3e9f81a8580, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -861,7 +877,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -354108773
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 3b88a5c32c6886e46b4158ab7b3c430e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -894,7 +910,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -354108773
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fb9e935102311414c9ec0b888b889427, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -927,7 +943,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -354108773
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4e0ff6031e3625542852caa974a91667, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -951,7 +967,7 @@ WheelJoint2D:
   m_Suspension:
     m_DampingRatio: 0.7
     m_Frequency: 2
-    m_Angle: 90
+    m_Angle: 0
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -974,7 +990,7 @@ WheelJoint2D:
   m_Suspension:
     m_DampingRatio: 1
     m_Frequency: 0.5
-    m_Angle: 1.889523e-18
+    m_Angle: 0
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -997,7 +1013,7 @@ WheelJoint2D:
   m_Suspension:
     m_DampingRatio: 0.7
     m_Frequency: 2
-    m_Angle: 90
+    m_Angle: 0
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1020,7 +1036,7 @@ WheelJoint2D:
   m_Suspension:
     m_DampingRatio: 1
     m_Frequency: 0.5
-    m_Angle: 1.889523e-18
+    m_Angle: 0
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
